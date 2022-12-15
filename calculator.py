@@ -30,12 +30,27 @@ while True:
     # if tokens[0] == "q":
     if "q" in tokens:
         break
-    
+
     else:
         if tokens[0] == "pow":
             result = power(num1, num2)
-            print (result)
+        elif tokens[0] == "+":
+            result = add(num1, num2)
+        elif tokens[0] == "-":
+            result = subtract(num1, num2)
+        elif tokens[0] == "/":
+            result = divide(num1, num2)
+        elif tokens[0] == "*":
+            result = multiply(num1, num2)
+        elif tokens[0] == "square":
+            result = square(num1, num2)
+        elif tokens[0] == "cube":
+            result = cube(num1, num2)
+        elif tokens[0] == "%":
+            result = mod(num1, num2)
+        print(result)
 
+        
 
 
 # repeat forever:
