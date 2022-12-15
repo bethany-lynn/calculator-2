@@ -16,9 +16,25 @@ from arithmetic import (add, subtract, multiply, divide, square, cube,
     # if ____ (operation), then perform the operation by pulling in the 
     # information needed from the indexing
 
+# A place to store the return value of the math function we call,
+    # to give us one clear place where that result is printed.
+    # result = None
+
 while True:
     calculation = input("Please compute: ")
     tokens = calculation.split(' ')
+    num1 = float(tokens[1])
+    num2 = float(tokens[2])
+    result = None
+
+    # if tokens[0] == "q":
+    if "q" in tokens:
+        break
+    
+    else:
+        if tokens[0] == "pow":
+            result = power(num1, num2)
+            print (result)
 
 
 
